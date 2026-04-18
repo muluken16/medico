@@ -1,0 +1,101 @@
+/* Global font and colors */
+:root {
+  font-family: 'Segoe UI', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #242424;
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Box-sizing and reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #242424;
+  scroll-behavior: smooth;
+  /* Hide scrollbar but keep functionality */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small responsive padding on both sides for all sections and footer */
+section, footer {
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  section {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+}
+
+.app-wrapper {
+  overflow-x: hidden;
+}
+
+/* Utility classes */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Mobile-friendly grids & sections */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .blog-cards {
+    display: block !important;
+  }
+
+  .blog-card {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .swiper-slide {
+    width: 90% !important;
+  }
+}
